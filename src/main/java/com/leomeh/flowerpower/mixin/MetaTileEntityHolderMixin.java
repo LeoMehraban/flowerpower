@@ -31,9 +31,9 @@ public abstract class MetaTileEntityHolderMixin extends TickableTileEntityBase i
     }
 
     @Override
-    protected void onFirstTick() {
+    public void onLoad() {
         ManaNetworkEvent.addCollector(this);
-        super.onFirstTick();
+        super.onLoad();
     }
 
     @Shadow(remap = false)
