@@ -1,0 +1,11 @@
+{
+  "package": "com.leomeh.flowerpower.mixin",
+  "refmap": "mixins.flowerpower.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [],
+  "client": [],
+  "server": ["MetaTileEntityHolderMixin"],
+  "verbose": true
+}
