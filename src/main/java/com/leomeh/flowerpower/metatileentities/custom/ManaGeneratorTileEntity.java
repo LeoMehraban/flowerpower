@@ -15,8 +15,6 @@ public class ManaGeneratorTileEntity extends SimpleGeneratorMetaTileEntity {
 
     public ManaGeneratorTileEntity(ResourceLocation metaTileEntityId, int tier) {
         super(metaTileEntityId, new RecipeMap<>("mana_gen_recipes", 0, 0, 0, 0, new SimpleRecipeBuilder(), true), Textures.COMBUSTION_GENERATOR_OVERLAY, tier, (n) -> n + 1);
-        if(new MetaTileEntityHolder() instanceof IManaCollector) System.out.println("Sucess");
-
     }
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity iGregTechTileEntity) {
@@ -35,7 +33,7 @@ public class ManaGeneratorTileEntity extends SimpleGeneratorMetaTileEntity {
     public void reciveMana(int mana){
         System.out.println(mana);
         if (energyContainer.getEnergyStored() <= energyContainer.getEnergyCapacity()) {
-            energyContainer.addEnergy(mana * ((getTier() + 1) * 16L));
+            energyContainer.addEnergy(mana * ((getTier() + 1) * 8L));
         }
     }
 }

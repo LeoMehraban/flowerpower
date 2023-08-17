@@ -75,4 +75,9 @@ public class MyMod implements ILateMixinLoader {
         list.add("mixins.mymodid.json");
         return list;
     }
+
+    @Override
+    public void onMixinConfigQueued(String mixinConfig) {
+        ILateMixinLoader.super.onMixinConfigQueued(mixinConfig);
+    }
 }
