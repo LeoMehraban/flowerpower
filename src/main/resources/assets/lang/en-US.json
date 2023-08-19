@@ -1,0 +1,8 @@
+{
+  "gregtech.material.manasteel": "Manasteel",
+  "gregtech.material.alchemical_brass": "Alchemical Brass",
+  "flowerpower.machine.mana_gen_lv.name": "LV Mana Generator",
+  "flowerpower.machine.mana_gen_mv.name": "MV Mana Generator",
+  "flowerpower.machine.mana_gen_hv.name": "HV Mana Generator",
+  "flowerpower.machine.mana_gen_ev.name": "EV Mana Generator"
+}
