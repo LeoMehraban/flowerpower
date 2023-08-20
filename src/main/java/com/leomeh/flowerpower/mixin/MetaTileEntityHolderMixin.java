@@ -61,16 +61,16 @@ public abstract class MetaTileEntityHolderMixin extends TickableTileEntityBase i
         mana = data.getInteger(TAG_MANA);
     }
 
-    @Override
-    public void update() {
-        if(metaTileEntity instanceof ManaGeneratorTileEntity tieredMetaTileEntity){
-            if(mana >= tieredMetaTileEntity.manaCostPerTier(tieredMetaTileEntity.getTier())){
-                mana -= tieredMetaTileEntity.manaCostPerTier(tieredMetaTileEntity.getTier());
-                tieredMetaTileEntity.reciveMana(tieredMetaTileEntity.manaCostPerTier(tieredMetaTileEntity.getTier()));
-            }
-        }
-        super.update();
-    }
+//    @Override
+//    public void update() {
+//        if(metaTileEntity instanceof ManaGeneratorTileEntity tieredMetaTileEntity){
+//            if(mana >= tieredMetaTileEntity.manaCostPerTier(tieredMetaTileEntity.getTier())){
+//                mana -= tieredMetaTileEntity.manaCostPerTier(tieredMetaTileEntity.getTier());
+//                tieredMetaTileEntity.reciveMana(tieredMetaTileEntity.manaCostPerTier(tieredMetaTileEntity.getTier()));
+//            }
+//        }
+//        super.update();
+//    }
 
     @Override
     public void recieveMana(int mana) {

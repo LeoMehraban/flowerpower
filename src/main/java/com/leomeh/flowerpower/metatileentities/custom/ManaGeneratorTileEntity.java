@@ -2,6 +2,7 @@ package com.leomeh.flowerpower.metatileentities.custom;
 
 import gregtech.api.capability.impl.EnergyContainerHandler;
 import gregtech.api.gui.ModularUI;
+import gregtech.api.metatileentity.MTETrait;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.MetaTileEntityHolder;
 import gregtech.api.metatileentity.SimpleGeneratorMetaTileEntity;
@@ -19,6 +20,7 @@ public class ManaGeneratorTileEntity extends SimpleGeneratorMetaTileEntity {
     public ManaGeneratorTileEntity(ResourceLocation metaTileEntityId, int tier) {
         super(metaTileEntityId, new RecipeMap<>("mana_gen_recipes", 0, 0, 0, 0, new SimpleRecipeBuilder(), true), Textures.COMBUSTION_GENERATOR_OVERLAY, tier, (n) -> n + 1);
     }
+
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity iGregTechTileEntity) {
         return new ManaGeneratorTileEntity(metaTileEntityId, getTier());
@@ -29,6 +31,7 @@ public class ManaGeneratorTileEntity extends SimpleGeneratorMetaTileEntity {
 
     @Override
     public void update() {
+        System.out.println(energyContainer.getEnergyStored());
         super.update();
     }
 
@@ -39,7 +42,6 @@ public class ManaGeneratorTileEntity extends SimpleGeneratorMetaTileEntity {
     }
 
     public void reciveMana(int mana){
-        System.out.println(mana);
         if (energyContainer.getEnergyStored() <= energyContainer.getEnergyCapacity()) {
             energyContainer.addEnergy((long) mana * (getTier() + 1));
         }
