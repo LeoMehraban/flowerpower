@@ -30,12 +30,6 @@ public class ManaGeneratorTileEntity extends SimpleGeneratorMetaTileEntity {
     }
 
     @Override
-    public void update() {
-        System.out.println(energyContainer.getEnergyStored());
-        super.update();
-    }
-
-    @Override
     protected void reinitializeEnergyContainer() {
         super.reinitializeEnergyContainer();
         ((EnergyContainerHandler) energyContainer).setSideOutputCondition((facing) -> facing == frontFacing);
