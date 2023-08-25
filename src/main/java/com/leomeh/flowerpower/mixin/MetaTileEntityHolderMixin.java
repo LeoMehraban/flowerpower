@@ -77,7 +77,6 @@ public abstract class MetaTileEntityHolderMixin extends TickableTileEntityBase i
         if(metaTileEntity instanceof ManaGeneratorTileEntity simpleGeneratorMetaTileEntity) {
             simpleGeneratorMetaTileEntity.reciveMana(mana);
         }
-        System.out.println(mana);
     }
 
     @Override
